@@ -6,7 +6,7 @@ class Message < ApplicationRecord
 
 
   def timestamp
-  	created_at.strftime('%H:%M:%S %d %B %Y')
+  	created_at.in_time_zone(-8).strftime('%H:%M:%S %Z %d %B %Y')
   end
   
 end
