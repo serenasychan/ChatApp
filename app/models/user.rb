@@ -4,11 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :name, presence: true, length: {minimum: 2, maximum: 1000}
+
+
   has_many :chat_rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
-
-  def name
-  	email.split('@')[0]
-  end
   
 end
