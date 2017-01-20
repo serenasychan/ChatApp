@@ -1,1 +1,23 @@
 @import "bootstrap";
+
+.main-content{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
+#messages {
+  max-height: 450px;
+  overflow-y: auto;
+  .avatar {
+    margin: 0.5rem;
+  }
+}
+
+.btn {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
